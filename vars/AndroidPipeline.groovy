@@ -10,9 +10,7 @@ def call(Map args) {
     // def keyAlias = pipelineArgs.keyAlias
 
     pipeline {
-        agent {
-            label "slave"
-        }
+        agent none
 
         enviroment {
             branch = "${BRANCH_NAME}"
