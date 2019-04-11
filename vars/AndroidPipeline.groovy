@@ -5,7 +5,7 @@ def call(Map args) {
     def android = new Android()
     def log = new Log()
 
-    def flavor = pipelineArgs.flavor
+    def flavor = args.flavor
     // def keyStoreId = pipelineArgs.keyStoreId
     // def keyAlias = pipelineArgs.keyAlias
 
