@@ -12,10 +12,6 @@ def call(Map args) {
     pipeline {
         agent none
 
-        enviroment {
-            branch = "${BRANCH_NAME}"
-        }
-
         stages {
             stage("Config") {
                 steps {
