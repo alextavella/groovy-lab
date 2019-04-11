@@ -1,7 +1,13 @@
 import com.tavella.frontend.Android
+import com.tavella.utils.Log
 
 def call(Map args) {
     def android = new Android()
+    def log = new Log()
+
+    def flavor = pipelineArgs.flavor
+    // def keyStoreId = pipelineArgs.keyStoreId
+    // def keyAlias = pipelineArgs.keyAlias
 
     pipeline {
         agent {
@@ -17,6 +23,7 @@ def call(Map args) {
                 steps {
                     script {
                         android.clean()
+                        log.info 'config!!!'
                     }
                 }
             }
@@ -24,6 +31,7 @@ def call(Map args) {
                 steps {
                     script {
                         android.build()
+                        log.info 'build!!!'
                     }
                 }
             }
@@ -31,6 +39,7 @@ def call(Map args) {
                 steps {
                     script {
                         android.sign()
+                        log.warning 'sign!!!'
                     }
                 }
             }
@@ -38,6 +47,7 @@ def call(Map args) {
                 steps {
                     script {
                         android.publish()
+                        log.info 'publish!!!'
                     }
                 }
             }
