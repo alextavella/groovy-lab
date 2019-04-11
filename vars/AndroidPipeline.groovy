@@ -1,5 +1,5 @@
-import com.tavella.frontend.Android
-import com.tavella.utils.Log
+import com.tavella.frontend.Android;
+import com.tavella.utils.Log;
 
 def call(Map args) {
     def android = new Android()
