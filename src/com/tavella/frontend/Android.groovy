@@ -1,3 +1,5 @@
+package com.tavella.frontend;
+
 def clean() {
     println("Clean")
 }

@@ -1,3 +1,5 @@
+package com.tavella.utils;
+
 def info(message) {
     echo "INFO: ${message}"
 }
