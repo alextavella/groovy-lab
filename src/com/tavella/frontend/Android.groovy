@@ -1,19 +1,18 @@
 package com.tavella.frontend;
 
 def clean() {
-    println("Clean")
+    wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm']) {
+        sh "gradle drink"
+    }
 }
 
 def build() {
-    println("Build")
 }
 
 def sign() {
-    println("Sign")
 }
 
 def publish() {
-    println("Publish")
 }
 
 return this

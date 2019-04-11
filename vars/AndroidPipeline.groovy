@@ -16,32 +16,32 @@ def call(Map args) {
             stage("Config") {
                 steps {
                     script {
-                        android.clean()
                         log.info 'config!!!'
+                        android.clean()
                     }
                 }
             }
             stage("Building") {
                 steps {
                     script {
-                        android.build()
                         log.info 'build!!!'
+                        android.build()
                     }
                 }
             }
             stage("Signing") {
                 steps {
                     script {
-                        android.sign()
                         log.warning 'sign!!!'
+                        android.sign()
                     }
                 }
             }
             stage("Publishing") {
                 steps {
                     script {
-                        android.publish()
                         log.info 'publish!!!'
+                        android.publish()
                     }
                 }
             }
